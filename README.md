@@ -1,4 +1,5 @@
-# sup
+sup [![Build Status](https://travis-ci.org/voutasaurus/sup.svg?branch=master)](https://travis-ci.org/voutasaurus/sup)
+=======
 
 sup is ping for https.
 
