@@ -5,7 +5,9 @@ sup is ping for https.
 
 # install
 
-```go get github.com/voutasaurus/sup```
+```
+$ go get github.com/voutasaurus/sup
+```
 
 # details
 
@@ -15,7 +17,15 @@ It does the full request including getting the response so if the landing page i
 
 Specify the domain name as the first and only argument to sup.
 
-```sup google.com```
+```
+$ sup google.com
+442.210126ms
+102.355754ms
+98.446453ms
+100.002899ms
+99.18354ms
+...
+```
 
 # why?
 
