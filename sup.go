@@ -23,7 +23,7 @@ func main() {
 	}
 	if *flagv {
 		// log with datetime in verbose mode
-		log.SetFlags(log.LstdFlags)
+		log.SetFlags(log.LstdFlags | log.Lmicroseconds)
 		trace := verboseTrace()
 		req = req.WithContext(httptrace.WithClientTrace(req.Context(), trace))
 	}
