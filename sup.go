@@ -14,11 +14,16 @@ func main() {
 	flagv := flag.Bool("v", false, "be really verbose, only do one request")
 	flag.Parse()
 
+	// By default log like a CLI
+	log.SetFlags(0)
+
 	req, err := http.NewRequest("GET", "https://"+flag.Arg(0), nil)
 	if err != nil {
 		log.Fatalf("could not build request: %v", err)
 	}
 	if *flagv {
+		// log with datetime in verbose mode
+		log.SetFlags(log.LstdFlags)
 		trace := verboseTrace()
 		req = req.WithContext(httptrace.WithClientTrace(req.Context(), trace))
 	}
